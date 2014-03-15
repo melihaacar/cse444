@@ -1,0 +1,35 @@
+  [1m[36m (201.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "password_digest" varchar(255), "remember_token" varchar(255)) [0m
+  [1m[35m (90.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (63.0ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (98.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (111.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (143.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140301194637')[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225193338')
+  [1m[36m (66.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140225194330')[0m
+  [1m[35m (89.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225195106')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (117.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "password_digest" varchar(255), "remember_token" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (88.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (125.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (106.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (77.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (100.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140309142223')[0m
+  [1m[35m (66.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225193338')
+  [1m[36m (66.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140225194330')[0m
+  [1m[35m (101.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225195106')
+  [1m[36m (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140301194637')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (126.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "password_digest" varchar(255), "remember_token" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (85.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (125.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (100.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (77.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (77.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140309142223')[0m
+  [1m[35m (121.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225193338')
+  [1m[36m (88.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140225194330')[0m
+  [1m[35m (108.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140225195106')
+  [1m[36m (92.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140301194637')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
