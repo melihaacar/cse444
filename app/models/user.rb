@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	
+	has_many :adverts, dependent: :destroy
 	attr_accessor :password, :password_confirmation
 	
 	before_save { self.email = email.downcase }

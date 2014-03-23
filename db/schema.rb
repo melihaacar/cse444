@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140309142223) do
+ActiveRecord::Schema.define(version: 20140316143150) do
+
+  create_table "adverts", force: true do |t|
+    t.string   "header"
+    t.text     "content"
+    t.string   "category"
+    t.string   "city"
+    t.string   "district"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "adverts", ["user_id"], name: "index_adverts_on_user_id"
+
+  create_table "cities", force: true do |t|
+    t.string   "head"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "districts", force: true do |t|
+    t.string   "head"
+    t.string   "name"
+    t.integer  "city_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "districts", ["city_id"], name: "index_districts_on_city_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

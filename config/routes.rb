@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  get "javascripts/dynamic_states"
   get "static_pages/home"
   get "static_pages/help"
   get "static_pages/about"
@@ -6,7 +7,9 @@ SampleApp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # ruby tutorial listing 7.3
-  resources :users
+  resources :users do
+	resources :adverts
+  end
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
